@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2d4e5b63_002Dc848_002D40a0_002Da5b3_002Dd4e28a1479cb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::DE51BAFC-B518-4020-B29C-1CF95516BD5C::net8.0::MockStuff.Tests.UnitTest1.Test1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::DE51BAFC-B518-4020-B29C-1CF95516BD5C::net8.0::MockStuff.Tests.UnitTest1.Test2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::DE51BAFC-B518-4020-B29C-1CF95516BD5C::net8.0::MockStuff.Tests.UnitTest1.Test3&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::DE51BAFC-B518-4020-B29C-1CF95516BD5C::net8.0::MockStuff.Tests.UnitTest1.Test4&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
