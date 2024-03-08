@@ -37,7 +37,7 @@ await dbContext.Database.MigrateAsync();
 var syncFeeds = sp.GetRequiredService<SyncFeeds>();
 var recurringJobs = sp.GetRequiredService<IRecurringJobManager>();
 // recurringJobs.AddOrUpdate("sync-feeds-sequentially", () => syncFeeds.SyncSequentially(), Cron.Minutely);
-// recurringJobs.AddOrUpdate("sync-feeds-concurrently", () => syncFeeds.SyncConcurrently(), Cron.Minutely);
+//recurringJobs.AddOrUpdate("sync-feeds-concurrently", () => syncFeeds.SyncConcurrently(), Cron.Minutely);
 // recurringJobs.AddOrUpdate("100x", () => syncFeeds.DoSomething100Times(), Cron.Minutely);
 
 app.Run();

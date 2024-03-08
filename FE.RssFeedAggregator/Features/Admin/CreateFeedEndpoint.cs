@@ -15,7 +15,7 @@ public class CreateFeedEndpoint : Endpoint<CreateFeedRequest, CreateFeedResponse
         Post("feeds");
     }
 
-    public async override Task<CreateFeedResponse> ExecuteAsync(CreateFeedRequest req, CancellationToken ct)
+    public override async Task<CreateFeedResponse> ExecuteAsync(CreateFeedRequest req, CancellationToken ct)
     {
         var newFeed = new Feed { Name = req.Name, Url = req.Url };
         appDbContext.Feeds.Add(newFeed);
