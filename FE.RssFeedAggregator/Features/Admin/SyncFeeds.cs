@@ -1,9 +1,7 @@
 ﻿using System.Xml.Serialization;
 using Hangfire;
-using Microsoft.EntityFrameworkCore;
-using MockStuff.Db;
 
-namespace FE.RssFeedAggregator.Features;
+namespace FE.RssFeedAggregator.Features.Admin;
 
 public class SyncFeeds
 {

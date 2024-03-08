@@ -1,10 +1,7 @@
-using FastEndpoints;
 using FastEndpoints.Security;
 using FastEndpoints.Swagger;
-using FE.RssFeedAggregator.Features;
+using FE.RssFeedAggregator.Features.Admin;
 using Hangfire;
-using Microsoft.EntityFrameworkCore;
-using MockStuff.Db;
 
 var bld = WebApplication.CreateBuilder();
 bld.Services.AddFastEndpoints();

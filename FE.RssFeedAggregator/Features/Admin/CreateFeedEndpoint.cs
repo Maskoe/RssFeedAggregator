@@ -1,7 +1,4 @@
-using FastEndpoints;
-using MockStuff.Db;
-
-namespace FE.RssFeedAggregator.Features;
+namespace FE.RssFeedAggregator.Features.Admin;
 
 public class CreateFeedEndpoint : Endpoint<CreateFeedRequest, CreateFeedResponse>
 {
@@ -14,6 +11,7 @@ public class CreateFeedEndpoint : Endpoint<CreateFeedRequest, CreateFeedResponse
 
     public override void Configure()
     {
+        Roles("admin");
         Post("feeds");
     }
 

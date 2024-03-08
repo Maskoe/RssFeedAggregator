@@ -1,7 +1,4 @@
-using FastEndpoints;
-using MockStuff.Db;
-
-namespace FE.RssFeedAggregator.Features;
+namespace FE.RssFeedAggregator.Features.UserManagement;
 
 public class RegisterEndpoint : Endpoint<RegisterRequest, RegisterResponse>
 {
@@ -20,7 +17,7 @@ public class RegisterEndpoint : Endpoint<RegisterRequest, RegisterResponse>
 
     public override async Task<RegisterResponse> ExecuteAsync(RegisterRequest req, CancellationToken ct)
     {
-        var newUser = new AppUser { Name = req.Name };
+        var newUser = new AppUser { Name = req.Name, Role = req.Role };
         appDbContext.AppUsers.Add(newUser);
 
         await appDbContext.SaveChangesAsync();
@@ -31,7 +28,7 @@ public class RegisterEndpoint : Endpoint<RegisterRequest, RegisterResponse>
     }
 }
 
-public record RegisterRequest(string Name);
+public record RegisterRequest(string Name, string Role);
 
 public record RegisterResponse(UserDto User);
 

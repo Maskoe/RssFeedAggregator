@@ -1,4 +1,4 @@
-namespace MockStuff.Db;
+namespace FE.RssFeedAggregator.Db;
 
 public class Subscription
 {

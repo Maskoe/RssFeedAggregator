@@ -1,7 +1,3 @@
-using FastEndpoints;
-using Microsoft.EntityFrameworkCore;
-using MockStuff.Db;
-
 namespace FE.RssFeedAggregator.Features;
 
 public class UnsubscribeFromFeedEndpoint : Endpoint<UnsubscribeFromFeedRequest>

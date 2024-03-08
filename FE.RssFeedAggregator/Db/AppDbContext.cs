@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace MockStuff.Db;
+﻿namespace FE.RssFeedAggregator.Db;
 
 public class AppDbContext : DbContext
 {

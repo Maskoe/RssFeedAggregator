@@ -3,6 +3,7 @@ using System;
 using FE.RssFeedAggregator.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FE.RssFeedAggregator.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240308101116_roles")]
+    partial class roles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +51,7 @@ namespace FE.RssFeedAggregator.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AppUsers", (string)null);
+                    b.ToTable("AppUsers");
                 });
 
             modelBuilder.Entity("FE.RssFeedAggregator.Db.Feed", b =>
@@ -76,7 +79,7 @@ namespace FE.RssFeedAggregator.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Feeds", (string)null);
+                    b.ToTable("Feeds");
                 });
 
             modelBuilder.Entity("FE.RssFeedAggregator.Db.Post", b =>
@@ -113,7 +116,7 @@ namespace FE.RssFeedAggregator.Migrations
 
                     b.HasIndex("FeedId");
 
-                    b.ToTable("Posts", (string)null);
+                    b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("FE.RssFeedAggregator.Db.Subscription", b =>
@@ -135,7 +138,7 @@ namespace FE.RssFeedAggregator.Migrations
                     b.HasIndex("FeedId", "AppUserId")
                         .IsUnique();
 
-                    b.ToTable("Subscriptions", (string)null);
+                    b.ToTable("Subscriptions");
                 });
 
             modelBuilder.Entity("FE.RssFeedAggregator.Db.Post", b =>

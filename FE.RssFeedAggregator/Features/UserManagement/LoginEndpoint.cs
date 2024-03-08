@@ -1,11 +1,8 @@
 using System.Security.Claims;
-using FastEndpoints;
 using FastEndpoints.Security;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.JsonWebTokens;
-using MockStuff.Db;
 
-namespace FE.RssFeedAggregator.Features;
+namespace FE.RssFeedAggregator.Features.UserManagement;
 
 public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
 {
@@ -33,6 +30,7 @@ public class LoginEndpoint : Endpoint<LoginRequest, LoginResponse>
             options.SigningKey = "MySuperSecretJwtSecretDontTellAnyone";
             options.User.Claims.Add(new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()));
             options.User.Claims.Add(new Claim(JwtRegisteredClaimNames.Name, user.Name));
+            options.User.Roles.Add(user.Role);
             options.ExpireAt = DateTime.UtcNow.AddDays(7);
         });
 

@@ -1,6 +1,3 @@
-using FastEndpoints;
-using MockStuff.Db;
-
 namespace FE.RssFeedAggregator.Features;
 
 public class SubscribeToFeedEndpoint : Endpoint<SubscribeToFeedRequest>
